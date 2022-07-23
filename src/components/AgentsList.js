@@ -21,7 +21,11 @@ export const AgentsList = () => {
   return (
     <>
       {agents.map((e) => {
-        return <div key={e.uuid}>Agents : {e.displayName}</div>;
+        return (
+          <div key={e.uuid} className="bg-slate-600">
+            Agents : {e.displayName}
+          </div>
+        );
       })}
     </>
   );
