@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { AgentCard } from "./AgentCard";
 import valorantApi from "../apis/valorantApi";
 
-export const AgentsList = () => {
+export const AgentList = () => {
   const [agents, setAgents] = useState([]);
 
   useEffect(() => {
     const fetchAgents = async () => {
       try {
         const fetchedAgents = await valorantApi.get("agents");
-        console.log(fetchedAgents.data.data);
         setAgents(fetchedAgents.data.data);
       } catch (error) {
         console.log(error);
@@ -20,13 +20,7 @@ export const AgentsList = () => {
 
   return (
     <>
-      {agents.map((e) => {
-        return (
-          <div key={e.uuid} className="bg-slate-600">
-            Agents : {e.displayName}
-          </div>
-        );
-      })}
+      <AgentCard data={agents} />
     </>
   );
 };

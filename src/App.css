@@ -1,0 +1,28 @@
+body {
+  background-color: #ff4656;
+}
+
+#agent-name {
+  color: white; /* Unfortunately you can't use transparent here … */
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+#agent-photo {
+  height: 472px;
+}
+
+.agent-skills {
+  padding: 9px;
+}
+
+@supports ((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
+  #agent-name {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+    text-shadow: none;
+  }
+}
