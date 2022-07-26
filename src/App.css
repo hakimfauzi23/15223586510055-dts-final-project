@@ -1,6 +1,4 @@
-body {
-  background-color: #ff4656;
-}
+
 
 #agent-name {
   color: white; /* Unfortunately you can't use transparent here … */
@@ -8,6 +6,11 @@ body {
     1px 1px 0 #ffffff;
   font-size: 50px;
   font-weight: 600;
+}
+
+.agents-swiper-container {
+  background-image: url('assets/swiper-agents.png');
+  background-size: cover;
 }
 
 #agent-photo {
@@ -18,8 +21,22 @@ body {
   padding: 9px;
 }
 
+.section-label {
+  color: white; /* Unfortunately you can't use transparent here … */
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+    font-size: 100px;
+  font-weight: 700;
+}
+
 @supports ((text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)) {
   #agent-name {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff;
+    text-shadow: none;
+  }
+  .section-label {
     color: transparent;
     -webkit-text-stroke: 1px #ffffff;
     text-stroke: 1px #ffffff;

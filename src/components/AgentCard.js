@@ -10,12 +10,34 @@ export const AgentCard = (data) => {
   console.log(agents);
 
   return (
-    <>
+    <div className="flex flex-row bg-red-600 agents-swiper-container">
+      <div
+        className="uppercase section-label self-center"
+        style={{
+          writingMode: "vertical-rl",
+          textOrientation: "mixed",
+        }}
+      >
+        AGENTS
+      </div>
       <Swiper
         navigation={true}
-        slidesPerView={5}
         spaceBetween={10}
         modules={[Pagination, Navigation]}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper"
       >
         {agents.map((e) => {
@@ -23,7 +45,7 @@ export const AgentCard = (data) => {
             <SwiperSlide>
               <div
                 key={e.uuid}
-                className=" bg-gray-800  rounded-t-lg relative w-48 h-96 m-10"
+                className=" bg-gray-800  rounded-t-lg relative w-48 h-96 my-32 ml-10 hover:bg-amber-400 cursor-pointer duration-300" 
               >
                 <div className="w-full h-full overflow-hidden">
                   <img
@@ -69,6 +91,6 @@ export const AgentCard = (data) => {
           );
         })}
       </Swiper>
-    </>
+    </div>
   );
 };
