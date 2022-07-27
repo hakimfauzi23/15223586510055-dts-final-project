@@ -10,7 +10,7 @@ export const AgentCard = (data) => {
   console.log(agents);
 
   return (
-    <div className="flex flex-row bg-red-600 agents-swiper-container">
+    <div className="flex flex-row bg-red-600 agents-image-container">
       <div
         className="uppercase section-label self-center"
         style={{

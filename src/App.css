@@ -8,7 +8,7 @@
   font-weight: 600;
 }
 
-.agents-swiper-container {
+.agents-image-container {
   background-image: url('assets/swiper-agents.png');
   background-size: cover;
 }
@@ -16,6 +16,21 @@
 #agent-photo {
   height: 472px;
 }
+
+#agent-detail-container {
+  height: 600px;
+  
+}
+#agent-detail-photo {
+  height: 635px;
+}
+
+#agent-detail-information {
+  height: 100%;
+  width: 75%;
+}
+
+
 
 .agent-skills {
   padding: 9px;

@@ -1,8 +1,8 @@
 import "./App.css";
-import { AgentList } from "./components/AgentList";
+import { AgentDetail } from "./components/AgentDetail";
 
 function App() {
-  return <AgentList />;
+  return <AgentDetail />;
 }
 
 export default App;
