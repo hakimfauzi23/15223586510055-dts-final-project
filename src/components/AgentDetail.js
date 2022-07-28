@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import valorantApi from "../apis/valorantApi";
 
 export const AgentDetail = () => {
+  let params = useParams();
+  const uuid = params?.uuid;
   const [agent, setAgent] = useState([]);
+
   useEffect(() => {
     const fetchAgent = async () => {
       try {
-        const fetchedAgent = await valorantApi.get(
-          `agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc`
-        );
+        const fetchedAgent = await valorantApi.get(`agents/${uuid}`);
         setAgent(fetchedAgent.data.data);
       } catch (error) {
         console.log(error);
@@ -16,7 +18,6 @@ export const AgentDetail = () => {
     };
 
     fetchAgent();
-
   }, []);
 
   return (
@@ -29,7 +30,7 @@ export const AgentDetail = () => {
         id="agent-detail-information"
         className="flex flex-col justify-center items-center"
       >
-        <div className="flex flex-col w-11/12" >
+        <div className="flex flex-col w-11/12">
           <div className="bg-neutral-100  h-80 rounded-t-lg shadow-md">
             <div className="p-6">
               <div className="font-semibold text-justify italic">
