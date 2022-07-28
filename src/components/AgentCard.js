@@ -2,12 +2,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
 export const AgentCard = (data) => {
-  const agents = data.data.filter((e) => e.isPlayableCharacter == true);
+  const agents = data.data.filter((e) => e.isPlayableCharacter === true);
 
   return (
     <div className="flex flex-row bg-red-600 agents-image-container">
@@ -23,7 +23,7 @@ export const AgentCard = (data) => {
       <Swiper
         navigation={true}
         spaceBetween={10}
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
         breakpoints={{
           640: {
             slidesPerView: 1,

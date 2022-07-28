@@ -18,12 +18,12 @@ export const AgentDetail = () => {
     };
 
     fetchAgent();
-  }, []);
+  }, [uuid]);
 
   return (
     <div
       id="agent-detail-container"
-      className="flex flex-row bg-red-600 overflow-visible agents-image-container"
+      className="flex flex-row bg-red-600  agents-image-container overflow-hidden"
     >
       <div
         key={agent.uuid}
