@@ -40,7 +40,6 @@
   color: white; /* Unfortunately you can't use transparent here … */
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
     1px 1px 0 #ffffff;
-    font-size: 100px;
   font-weight: 700;
 }
 
