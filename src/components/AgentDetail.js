@@ -56,7 +56,7 @@ export const AgentDetail = () => {
                         (e) => e.slot !== "Ultimate" && e.slot !== "Passive"
                       )
                       .map((e) => (
-                        <span className="capitalize">
+                        <span className="capitalize" key={e.uuid}>
                           {e.displayName.toLowerCase()} |{" "}
                         </span>
                       ))}
@@ -70,7 +70,7 @@ export const AgentDetail = () => {
                     {agent.abilities
                       ?.filter((e) => e.slot === "Ultimate")
                       .map((e) => (
-                        <span className="capitalize">
+                        <span className="capitalize" key={e.uuid}>
                           {e.displayName.toLowerCase()}{" "}
                         </span>
                       ))}
@@ -84,7 +84,7 @@ export const AgentDetail = () => {
                     {agent.abilities
                       ?.filter((e) => e.slot === "Passive")
                       .map((e) => (
-                        <span className="capitalize">{e.displayName} </span>
+                        <span className="capitalize" key={e.uuid}>{e.displayName} </span>
                       ))}
                   </span>
                 </div>

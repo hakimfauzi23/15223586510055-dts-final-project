@@ -1,7 +1,22 @@
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../apis/firebase";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+
+  const onLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <nav
@@ -85,9 +100,27 @@ export const Navbar = () => {
               MAPS
             </Link>
           </div>
-          <div className="px-4 lg:w-auto text-white">
-                Hi Visitor !
-          </div>
+          {!user ? (
+            <div className="px-4 lg:w-auto text-white">
+              <Link
+                to="/login"
+                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-600 mr-4"
+              >
+                Sign in Here!
+              </Link>
+            </div>
+          ) : (
+            <div className="px-4 lg:w-auto text-white">
+              Hi {user.email} {}
+              <Link
+                to="#responsive-header"
+                onClick={onLogout}
+                className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-red-600 mr-4"
+              >
+                | Sign Out Here!
+              </Link>
+            </div>
+          )}
         </div>
       </nav>
     </>

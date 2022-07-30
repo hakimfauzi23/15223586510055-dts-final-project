@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AgentCard } from "./AgentCard";
+import { AgentCard } from "../components/AgentCard";
 import valorantApi from "../apis/valorantApi";
 
 export const AgentList = () => {
