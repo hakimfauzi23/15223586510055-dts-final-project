@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap");
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
 #agent-name {
   color: white; /* Unfortunately you can't use transparent here … */
@@ -9,7 +13,7 @@
 }
 
 .agents-image-container {
-  background-image: url('assets/swiper-agents.png');
+  background-image: url("assets/swiper-agents.png");
   background-size: cover;
 }
 
@@ -19,7 +23,6 @@
 
 #agent-detail-container {
   height: 600px;
-  
 }
 #agent-detail-photo {
   height: 635px;
@@ -29,8 +32,6 @@
   height: 100%;
   width: 75%;
 }
-
-
 
 .agent-skills {
   padding: 9px;
@@ -63,13 +64,13 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: #DC2626; 
+  background: #dc2626;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }

@@ -137,7 +137,7 @@ export const AgentCard = (data) => {
                     </div>
                     <div
                       id="agent-name"
-                      className="absolute top-2 -left-8 uppercase"
+                      className="absolute top-2 -left-10 uppercase"
                       style={{
                         writingMode: "vertical-rl",
                         textOrientation: "mixed",
