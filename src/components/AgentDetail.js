@@ -20,6 +20,8 @@ export const AgentDetail = () => {
     fetchAgent();
   }, [uuid]);
 
+  console.log(agent);
+
   return (
     <div
       id="agent-detail-container"
@@ -131,7 +133,7 @@ export const AgentDetail = () => {
         <img
           className="-mr-32 object-cover"
           id="agent-detail-photo"
-          src={agent.bustPortrait}
+          src={agent.fullPortrait}
           alt={agent.developerName}
         />
       </div>

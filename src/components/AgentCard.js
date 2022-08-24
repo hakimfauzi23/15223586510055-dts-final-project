@@ -110,6 +110,7 @@ export const AgentCard = (data) => {
           className="mySwiper"
         >
           {agents.map((e) => {
+            console.log(e)
             return (
               <SwiperSlide>
                 <Link to={`/agent/${e.uuid}`}>
@@ -121,7 +122,7 @@ export const AgentCard = (data) => {
                       <img
                         className="object-center object-cover scale-125 ml-8"
                         id="agent-photo"
-                        src={e.fullPortraitV2}
+                        src={e.fullPortrait}
                         alt="phoenix"
                       />
                     </div>
